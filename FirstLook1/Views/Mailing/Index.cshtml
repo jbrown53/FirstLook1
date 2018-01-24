@@ -1,0 +1,28 @@
+﻿@model IEnumerable<FirstLook1.Models.Mailing>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.firstName)</th>
+            <th>@Html.DisplayNameFor(model => model.lastName)</th>
+            <th>@Html.DisplayNameFor(model => model.email)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(model => item.firstName)</td>
+                <td>@Html.DisplayFor(model => item.lastName)</td>
+                <td>@Html.DisplayFor(model => item.email)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
